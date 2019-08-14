@@ -54,16 +54,18 @@ class MainActivity : AppCompatActivity() {
             super.onPostExecute(result)
 
             val jsonArr = JSONArray(result)
+            var itemAfterEdit = ""
             for (items in 0 until jsonArr.length()) {
                 val itemsName = jsonArr.getString(items)
                 handleData(itemsName)
-            }
-            listItems.
+                itemAfterEdit = handleData(itemsName)
+                listItems.add(itemAfterEdit)
 
+            }
         }
     }
 
-    fun handleData(name: String) {
+    fun handleData(name: String): String {
         // chuyen chuoi thanh mang ki tu
         val position = (name.length) / 2
 
@@ -85,10 +87,10 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-
+        return name
     }
 
     companion object {
-        var listItems : List<String>? = null
+        var listItems : ArrayList<String> = ArrayList()
     }
 }
