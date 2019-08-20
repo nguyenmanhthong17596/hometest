@@ -1,5 +1,6 @@
 package com.example.hometest
 
+import android.annotation.SuppressLint
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,9 +22,11 @@ class MainActivity : AppCompatActivity() {
 
         val urlJson = "https://raw.githubusercontent.com/tikivn/android-home-test/v2/keywords.json"
         ReadJSON().execute(urlJson)
+        listItems
     }
 
 
+    @SuppressLint("StaticFieldLeak")
     inner class ReadJSON : AsyncTask<String, Void, String>() {
         override fun doInBackground(vararg p0: String?): String {
             val content = StringBuilder()
@@ -53,12 +56,13 @@ class MainActivity : AppCompatActivity() {
         override fun onPostExecute(result: String?) {
             super.onPostExecute(result)
 
+            var itemAfterEdit : String
             val jsonArr = JSONArray(result)
-            var itemAfterEdit = ""
+
             for (items in 0 until jsonArr.length()) {
                 val itemsName = jsonArr.getString(items)
-                handleData(itemsName)
                 itemAfterEdit = handleData(itemsName)
+                Toast.makeText(applicationContext,itemsName,Toast.LENGTH_SHORT).show()
                 listItems.add(itemAfterEdit)
 
             }
@@ -69,6 +73,11 @@ class MainActivity : AppCompatActivity() {
         // chuyen chuoi thanh mang ki tu
         val position = (name.length) / 2
 
+        // chuoi sau khi tach
+        var first: String
+        var last: String
+        var textAfterChange : String = ""
+
         // lay gia tri tai vi tri giua cua chuoi
         // so sanh gia tri do voi " " neu bang tra ve chuoi moi
         // else se di chuyen ve 2 phia den khi tim dc " " moi-> so sanh 2 chuoi sau khi tach neu nho nhat -> tach chuoi
@@ -77,17 +86,17 @@ class MainActivity : AppCompatActivity() {
             for (j in (name.length) downTo position) {
                 val wordToSplit = name[position]
                 if (wordToSplit == ' ') {
-                    val string1 = name.substring(position)
-                    val string2 = name.substring(position, name.length)
-                    Log.i("THONG", "String1 : $string1\nString2: $string2")
+                    first = name.substring(position)
+                    last = name.substring(position, name.length)
+                    Log.i("THONG", "String1 : $first\nString2: $last")
                     // set text to UI
-                    val textAfterChangeError = "$string1\n$string2"
-                    Toast.makeText(applicationContext, textAfterChangeError, Toast.LENGTH_LONG).show()
+                    textAfterChange = "$first\n$last"
+                    Toast.makeText(applicationContext, textAfterChange, Toast.LENGTH_LONG).show()
                 }
             }
 
         }
-        return name
+        return textAfterChange
     }
 
     companion object {

@@ -1,4 +1,1 @@
-#Mon Aug 12 08:32:04 ICT 2019
-base.0=D\:\\Code\\Android Kotlin\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
-path.0=classes.dex
-renamed.0=classes.dex
+#Tue Aug 20 17:09:11 ICT 2019
