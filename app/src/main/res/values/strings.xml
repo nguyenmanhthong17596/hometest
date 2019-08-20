@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HomeTest</string>
+    <string name="item_name">%1$s\n%2$s</string>
 </resources>

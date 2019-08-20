@@ -1,11 +1,11 @@
 #Internal package file, do not edit.
-#Tue Aug 20 18:10:44 ICT 2019
-1.base=/Users/nmanhthong/Downloads/Android Kotlin/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+#Tue Aug 20 23:48:03 ICT 2019
+1.base=D\:\\Code\\Android Kotlin\\Home Test\\hometest\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY
 count=2
 1.set=DEX
 0.path=classes.dex
 0.set=DEX
-0.base=/Users/nmanhthong/Downloads/Android Kotlin/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+0.base=D\:\\Code\\Android Kotlin\\Home Test\\hometest\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
 1.path=classes.dex
