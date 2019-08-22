@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Android Kotlin.iml" filepath="$PROJECT_DIR$/Android Kotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hometest.iml" filepath="$PROJECT_DIR$/hometest.iml" />
     </modules>
   </component>
 </project>

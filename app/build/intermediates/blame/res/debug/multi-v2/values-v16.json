@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Code\\Android Kotlin\\Home Test\\hometest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "/Users/nmanhthong/Downloads/Android Kotlin/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\79b6619b2438bf751f2980189ffaf334\\res\\values-v16\\values-v16.xml",
+                    "source": "/Users/nmanhthong/.gradle/caches/transforms-2/files-2.1/03743ea8966cc995e8de6101d2739473/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/nmanhthong/.gradle/caches/transforms-2/files-2.1/336f66d5695e0d2f7374362b15d13231/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-2\\files-2.1\\7247922121ad001378f33347f7fc5257\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

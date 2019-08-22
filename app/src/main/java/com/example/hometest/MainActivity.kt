@@ -29,11 +29,8 @@ class MainActivity : AppCompatActivity() {
         val urlJson = "https://raw.githubusercontent.com/tikivn/android-home-test/v2/keywords.json"
         ReadJSON().execute(urlJson)
 
-        val view = findViewById<RecyclerView>(R.id.itemList)
-        view.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        val adapter = ItemAdapter(listOfItems)
-        view.adapter = adapter
+//        adapter.notifyDataSetChanged()
     }
 
     @SuppressLint("StaticFieldLeak")
@@ -71,6 +68,13 @@ class MainActivity : AppCompatActivity() {
                 handleData(itemsName)
 //                Toast.makeText(applicationContext, itemsName, Toast.LENGTH_SHORT).show()
             }
+            val view = findViewById<RecyclerView>(R.id.itemList)
+            view.layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.HORIZONTAL, false)
+
+            val adapter = ItemAdapter(this@MainActivity , listOfItems)
+            view.adapter = adapter
+
+
         }
     }
 
